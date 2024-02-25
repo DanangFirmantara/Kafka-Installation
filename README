@@ -1,0 +1,13 @@
+#run command:
+`docker-compose up -d`
+`docker exec -it kafka /bin/sh`
+
+#run producer:
+`kafka-console-producer.sh --topic quickstart --bootstrap-server localhost:9092`
+
+#run consumer:
+`kafka-console-consumer.sh --topic quickstart --bootstrap-server localhost:9092`
+
+#check group list:
+`kafka-consumer-groups.sh  --list --bootstrap-server localhost:9092`
+`kafka-consumer-groups.sh --describe --group group-1 --bootstrap-server localhost:9092`
